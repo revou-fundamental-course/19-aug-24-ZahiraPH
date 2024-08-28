@@ -8,7 +8,93 @@
 </head>
 
 <body>
+    <nav>
+        <header>
+            <div class="logo-item"> </div>
+        </header>
+
+        <section class="nav-container">
+            <a href="#" class="nav-item" > Home </a>
+            <a href="#our-profile" class="nav-item" > Our Profile </a>
+            <a href="#" class="nav-item" > Achivement </a>
+            <a href="#" class="nav-item" > Message Us </a>
+        </section>
+    </nav>
+
+    <hr />
+
+    <main>
+        <article> 
+            <header>
+                <h1> Welcome user, to our website</h1>
+            </header>
+
+            <p> Nice to meet you</p>
+
+            <div class="Banner-Image img-1"> </div>
+            <div class="Banner-Image img-2"> </div>
+            <div class="Banner-Image img-3"> </div>
+
+        </article>
+
+        <hr />
+
+        <!-- <hr /> pembatas -->
+
+        <section id="our-profile">
+            <header> 
+                <h1>Our Profile</h1> 
+            </header>
+
+            <section class="profile-container">
+                <div class="profile-item"> 
+                    <div class="profile-image"></div>
+
+                    <h2>Software Enginer</h2>
+                </div>
+
+                <div class="profile-item"> 
+                    <div class="profile-image"></div>
+
+                    <h2>Software Enginer</h2>
+                </div>
+
+                <div class="profile-item"> 
+                    <div class="profile-image"></div>
+
+                    <h2>Software Enginer</h2>
+                </div>
+
+            </section>
+        </section>
+
+        <section>
+            <header>
+                <h1>Message Us</h1>
+            </header>
+            <form>
+                <div>
+                    <label for="name" >Name</label><input id="name" required />
+                </div>
+                <button type="button" onclick="formValidation()">Submit</button>
+            </form>
+
+            <div>
+                Result: <span id="result"></span>
+            </div>
+
+            <button type="button" onclick="nextSlide(1)">Next Slide</button>
+
+        </section>
+    </main>
+
+    <hr />
     
+    <footer>
+        <p>Made by Zahira</p>
+    </footer>
+
+    <script src="js\script.js"></script>
 </body>
 
 </html>
