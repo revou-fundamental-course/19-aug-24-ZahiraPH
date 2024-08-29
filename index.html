@@ -8,6 +8,7 @@
 </head>
 
 <body>
+
     <nav>
         <header>
             <div class="logo-item"> </div>
@@ -15,9 +16,9 @@
 
         <section class="nav-container">
             <a href="#" class="nav-item" > Home </a>
-            <a href="#our-profile" class="nav-item" > Our Profile </a>
-            <a href="#" class="nav-item" > Achivement </a>
-            <a href="#" class="nav-item" > Message Us </a>
+            <a href="#my-profile" class="nav-item" > My Profile </a>
+            <a href="#contact-form" class="nav-item" > Your Profile </a>
+            <a href="#last-statement" class="nav-item" > Last </a>
         </section>
     </nav>
 
@@ -25,9 +26,15 @@
 
     <main>
         <article> 
-            <header>
-                <h1> Welcome user, to our website</h1>
-            </header>
+            <!-- <button id="tombol">Ganti nama</button> -->
+
+        <form name="message-form" onsubmit="return validateForm()">
+            <input type="text" placeholder="Nama Anda" id="name-input" name="name-input" required>
+            <button id="submit" type="submit">Kirim</button>
+            <p id="error-name"></p>
+        </form>
+
+        <h1>HI! <span id="display-name">-</span> Welcome to my web!</h1>
 
             <p> Nice to meet you</p>
 
@@ -35,15 +42,18 @@
             <div class="Banner-Image img-2"> </div>
             <div class="Banner-Image img-3"> </div>
 
+            <hr />
+            <button type="button" onclick="nextSlide(1)">Next Slide</button>
         </article>
 
         <hr />
 
         <!-- <hr /> pembatas -->
 
-        <section id="our-profile">
+        <section id="my-profile">
             <header> 
-                <h1>Our Profile</h1> 
+                <h1>My Profile</h1> 
+                <p>Coming Soon (InsyaAllah)</p>
             </header>
 
             <section class="profile-container">
@@ -56,42 +66,80 @@
                 <div class="profile-item"> 
                     <div class="profile-image"></div>
 
-                    <h2>Software Enginer</h2>
+                    <h2>Data Analyst</h2>
                 </div>
 
                 <div class="profile-item"> 
                     <div class="profile-image"></div>
 
-                    <h2>Software Enginer</h2>
+                    <h2>Public Speaker</h2>
                 </div>
 
             </section>
+
         </section>
+        <hr/>
 
         <section>
             <header>
-                <h1>Message Us</h1>
+                <h1>Who are you?</h1>
             </header>
-            <form>
-                <div>
-                    <label for="name" >Name</label><input id="name" required />
-                </div>
-                <button type="button" onclick="formValidation()">Submit</button>
-            </form>
+            <div class="form-container"> 
+                <form id="contact-form">
+                    <div>
+                        <label for="your-name">Name</label>
+                        <input id="your-name" required />
+                    </div>
 
-            <div>
-                Result: <span id="result"></span>
+                    <div>
+                        <label for="gender" >Jenis Kelamin</label> 
+                        <select id="gender" required>
+                            <option value="male">Pria</option>
+                            <option value="female">Wanita</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="dob" >Tanggal Lahir</label>
+                        <input id="dob" type="date" required />
+                    </div>
+
+                    <div>
+                        <label for="mesage" >Pesan</label>
+                        <textarea id="message" rows="4" required></textarea>
+                    </div>
+
+                    <button type="button" onclick="formValidation()">Submit</button>
+                </form>
+
+                <div class="result-container">
+                    <div class="result-box">
+                        <label>Nama:</label>
+                        <span id="result-name"></span>
+                    </div>
+                    <div class="result-box">
+                        <label>Jenis Kelamin:</label>
+                        <span id="result-gender"></span>
+                    </div>
+                    <div class="result-box">
+                        <label>Tanggal Lahir:</label>
+                        <span id="result-dob"></span>
+                    </div>
+                    <div class="result-box">
+                        <label>Pesan:</label>
+                        <span id="result-message"></span>
+                    </div>
+                </div>            
             </div>
-
-            <button type="button" onclick="nextSlide(1)">Next Slide</button>
 
         </section>
     </main>
 
     <hr />
     
-    <footer>
-        <p>Made by Zahira</p>
+    <footer id="last-statement">
+        <p>Belajar dan terus berlatih</p>
+        <p>Made by Zahira & bantuan lainnya</p>
     </footer>
 
     <script src="js\script.js"></script>
